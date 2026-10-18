@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mapgis-toolkit-Skill"
+version = "0.2.0"
+description = "Read, write, inspect and build MapGIS 10 HDB databases and .mapx map documents without MapGIS Desktop"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "mapgis-toolkit-Skill contributors" }]
+keywords = ["mapgis", "gis", "hdb", "mapx", "shapefile", "geojson", "cartography", "reverse-engineering"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: GIS",
+]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/you/mapgis-toolkit-Skill"
+Issues = "https://github.com/you/mapgis-toolkit-Skill/issues"
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.0"]
+geo = ["shapely>=2.0", "pyproj>=3.0"]
+raster = ["rasterio>=1.3", "numpy>=1.24"]
+net = ["networkx>=3.0"]
+color = ["pillow>=10.0"]
+all = ["mcp>=1.0", "shapely>=2.0", "pyproj>=3.0", "rasterio>=1.3",
+       "numpy>=1.24", "networkx>=3.0", "pillow>=10.0"]
+
+[project.scripts]
+mapgis-hdb = "mapgis_toolkit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mapgis_toolkit = ["py.typed"]

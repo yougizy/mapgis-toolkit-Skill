@@ -1,0 +1,13 @@
+include README.md
+include README.zh-CN.md
+include LICENSE
+include CONTRIBUTING.md
+include AGENTS.md
+include CHANGELOG.md
+
+recursive-include docs *.md *.json
+recursive-include examples *.py
+recursive-include tools *.py
+recursive-include tests *.py
+
+exclude .gitignore
