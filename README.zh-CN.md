@@ -2,7 +2,7 @@
 
 [English](README.md) | **简体中文**
 
-> 逆向 MapGIS 10 的 **HDB 地理数据库**与 **`.mapx` 地图文档**格式，提供可编程的读写、体检与制图能力。
+>  MapGIS 10 的 **HDB 地理数据库**与 **`.mapx` 地图文档**格式，提供可编程的读写、体检与制图能力。
 > 不依赖 MapGIS 客户端、不依赖 GDAL，核心只用 Python 标准库。
 
 > 本项目为独立社区项目，与 MapGIS 官方无关。
@@ -13,7 +13,7 @@ MapGIS Desktop 没有可调用的 API/MCP，窗口也不暴露可编程控件（
 要稳定地批量制图、检查数据、生成工程，只能从**文件格式**入手。
 
 本项目把 MapGIS 10.8 自带样本（`Sample/示例数据.hdb`、`Program/Config/MapTemplates/CoomMap/*.mapx`）
-逆向成一套可用的读写库，并做了字节级验证。
+制作成一套可用的读写库，并做了字节级验证。
 
 ## 能力一览
 
